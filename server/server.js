@@ -1,9 +1,15 @@
 const express = require('express')
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+
+require('dotenv').config();
+
+const ID = process.env.API_ID;
+const KEY = process.env.API_KEY;
+
+app.get('/hello', (req, res) => {
+  res.send({express: KEY})
 });
 
 app.listen(port, () => {
