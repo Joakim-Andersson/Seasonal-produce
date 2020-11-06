@@ -1,15 +1,14 @@
 import React from 'react'
 
-function Recipe({rec}) {
-  console.log("From recipe", rec);
+function Recipe({key, label, image}) {
     return (
-        <article className="flip-card" key={rec.totalTime}>
+        <article className="flip-card" key={key}>
             <div className="inner">
               <div className="front">
-                <img className="image" src={rec.image} alt={rec.label} />
+                <img className="image" src={image} alt={label} />
               </div>
               <div className="back">
-                <p>{rec.label}</p>
+                <p>{label}</p>
               </div>
             </div>
         </article>

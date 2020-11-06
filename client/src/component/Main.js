@@ -1,32 +1,61 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Recipe from './Recipe';
+import axios from "axios";
+const fetch = require('node-fetch');
 
 function Main({foodNow}) {
-    const [searchState, setsearchState] = useState([]);
+    const [searchState, setSearchState] = useState([]);
 
-    console.log("foodnow search", foodNow);
+    const getSearch = async (search) => {
+        console.log("thisis search", search);
+        const response = await fetch(
+            `http://localhost:8000/hello/${search}`
+            );
+            const data = await response.json();
+            console.log("helllllllllll", data)
+            setSearchState(data);
+            console.log(searchState);
+        }
 
-    const getSearch = (search) => {
+    // .then(response => response.json())
+    // .then(data => setsearchState((current) => [...current, data.data]))
+    // console.log("after search", searchState);
+    // }
 
-    console.log(search)
-    axios.get(`/hello/q=${search}`)
-    .then(response => response.data)
-    .then(data => setsearchState(data))
-    }
-    console.log("after search", searchState);
+    // const getSearch = async (search) => {
+    //     try {
+    //         const res = await axios(
+    //             `http://localhost:8000/hello/${search}`
+    //         );
+    //         console.log("resultat", (res.data))
+    //         if (res.data) {
+    //             // let arr = [];
+    //             // for (const data in res.data) {
+    //             //     arr.push(`${data}: ${res.data}`);
+    //             // }
+    //             console.log(res.data);
+    //         setsearchState([...searchState, (res.data.hits)]);
+    //         console.log("------- sista console", searchState)
+    //     }
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
 
     return (
         <div>
-            {searchState}
-        <ul>
-        { foodNow.length !== 0 && foodNow.map(o => <li onClick={() => getSearch({o})} key={o}>{<a href={'/hello/q=' + o}>{o}</a>}</li>)
+        <ul className="monthFood" >
+        {foodNow.length !== 0 && foodNow.map(
+            food =>
+            <li className="list-monthFood" onClick={() => getSearch(food)} key={food}>
+                {food}
+            </li>
+            )
         }
         </ul>
-        { searchState.length !== 0 && searchState.map(o => <li>{o.recipe[1]}</li>)}
+        {searchState.length !== 0 && searchState.map(recipe => ( <Recipe key={recipe.recipe.label} label={recipe.recipe.label} image={recipe.recipe.image} ingredients={recipe.recipe.ingredients} />))}
         </div>
     )
 }
 
 export default Main;
-

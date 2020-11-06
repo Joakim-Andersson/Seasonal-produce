@@ -2,9 +2,9 @@ import React from 'react'
 
 function Footer() {
     return (
-        <h4>
+        <footer className="footer" >
             Thank you for helping the environment!
-        </h4>
+        </footer>
     )
 }
 
