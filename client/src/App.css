@@ -3,7 +3,6 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -16,6 +15,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
 body, html {
   height: 100%;
+  overflow-y: scroll; 
 }
 
 
@@ -90,15 +90,21 @@ position: relative;
   align-items: center;
   justify-content: center;
   color: rgb(226, 226, 226);
+  overflow-y: scroll; 
 }
 
-.month {
-  font-size: 4em;
-  font-family: 'Courgette', cursive;
+.month-name {
+font-size: 4em;
+margin-top: 90px;
+font-family: 'Courgette', cursive;
+}
+
+.main-veggielist {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 .monthFood {
@@ -106,8 +112,8 @@ position: relative;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 20px;
   flex-wrap: wrap;
+  font-size: 20px;
 }
 
 .list-monthFood {
@@ -116,7 +122,10 @@ position: relative;
   align-items: center;
   justify-content: center;
   margin: 20px;
-  
+  border-radius: 5px;
+  height: 25%;
+  width: 20%;
+  cursor: pointer; 
 }
 
 .list-monthFood {
@@ -128,10 +137,12 @@ position: relative;
 .footer {
   font-size: 1em;
   margin: 20px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-family: 'Courgette', cursive;
 }
 
 .recipes {
@@ -139,7 +150,7 @@ position: relative;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin-top: 50px;
   flex-wrap: wrap; 
 }
 
@@ -181,3 +192,26 @@ position: relative;
   transform: rotateY(180deg);
 }
 
+.back {
+  margin-top: 20px;
+  overflow-x: scroll;
+  white-space: wrap;
+  width: 50px;
+}
+
+.recipe-name {
+  font-family: 'Courgette', cursive;
+  font-size: 2em;
+  padding: 10px 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ingredient-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 30px;
+}

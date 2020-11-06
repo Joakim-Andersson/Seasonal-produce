@@ -43,7 +43,8 @@ function Main({foodNow}) {
     // };
 
     return (
-        <div>
+        <div className="main-veggielist">
+            <h3 className="month-name" >November</h3>
         <ul className="monthFood" >
         {foodNow.length !== 0 && foodNow.map(
             food =>
@@ -54,7 +55,7 @@ function Main({foodNow}) {
         }
         </ul>
         <ul className="recipes" >
-        {searchState.length !== 0 && searchState.map(recipe => ( <Recipe key={recipe.recipe.label} label={recipe.recipe.label} image={recipe.recipe.image} ingredients={recipe.recipe.ingredients} />))}
+        {searchState.length !== 0 && searchState.map(recipe => ( <Recipe key={recipe.recipe.label} label={recipe.recipe.label} image={recipe.recipe.image} ingredient={recipe.recipe.ingredientLines} />))}
         </ul>
         </div>
     )

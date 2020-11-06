@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-function Recipe({key, label, image}) {
+
+function Recipe({key, label, image, ingredient}) {
     return (
         <article className="flip-card" key={key}>
             <div className="inner">
@@ -8,7 +9,8 @@ function Recipe({key, label, image}) {
                 <img className="image" src={image} alt={label} />
               </div>
               <div className="back">
-                <p>{label}</p>
+                <h3 className="recipe-name">{label}</h3>
+                { ingredient.map(ingr => <p className="ingredient-part"> {ingr} </p> )}
               </div>
             </div>
         </article>
@@ -16,3 +18,4 @@ function Recipe({key, label, image}) {
 }
 
 export default Recipe;
+

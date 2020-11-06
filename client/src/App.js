@@ -16,7 +16,7 @@ const veggiePerMonth = [
   {"id": 7, "month": "August", "veggies": ["Celery", "Cauliflower", "Broccoli", "Cucumber", "Artichoke", "Kohlrabi", "Majrova", "Maize", "Mangold", "Carrots", "Parsnip", "Pepper", "Parsley", "Potato", "Pumpkin", "Ruccola", "Radishes", "Black radish", "Beetroot", "Red cabbage", "Spinach", "Squash", "Tomato", "Wax beans", "Cabbage"]},
   {"id": 8, "month": "September", "veggies": ["Celery", "Cauliflower", "Broccoli", "Brussels sprouts", "Cucumber", "Artichoke", "Kohlrabi", "Majrova", "Maize", "Mangold", "Carrots", "Parsnip", "Pepper", "Parsley", "Potato", "Pumpkin", "Celeriac", "Ruccola", "Black radish", "Beetroot", "Red cabbage", "Savoy", "Spinach", "Squash", "Black root", "Tomato", "Wax beans", "Cabbage"]},
   {"id": 9, "month": "October", "veggies": ["Celery", "Cauliflower", "Broccoli", "Brussels sprouts", "Cucumber", "Artichoke", "Carrots", "Parsnip", "Parsley", "Potato", "Pumpkin Leek", "Celeriac", "Black radish", "Beetroot", "Red cabbage", "Squash", "Black root", "Tomato", "Cabbage"]},
-  {"id": 10, "month": "November", "veggies": ["Brussels sprouts", "Kale", "Carrots", "Parsnip", "potato", "Pumpkin", "Celeriac", "Black radish", "Beetroot", "Red cabbage", "Black root", "Cabbage"]},
+  {"id": 10, "month": "November", "veggies": ["Brussels sprouts", "Kale", "Carrots", "Parsnip", "Potato", "Pumpkin", "Celeriac", "Black radish", "Beetroot", "Red cabbage", "Black root", "Cabbage"]},
   {"id": 11, "month": "December", "veggies": ["Brussels sprouts", "Kale", "Yellow onion", "artichoke", "Carrots", "Parsnip", "Potato", "Pumpkin", "Celeriac", "Black radish", "Beetroot", "Red cabbage", "Salad bowl", "Savoy cabbage", "Black root", "Cabbage"]}
   ]
 
@@ -32,19 +32,16 @@ useEffect(() => {
   getMonthFood(monthIndex);
 },[]);
 
-let monthy = "November";
 
 const getMonthFood = monthIndex => {
   const monthNow = veggiePerMonth.find(month => month.id === monthIndex);
   const veggies = monthNow.veggies;
-  monthy = monthNow.month;
   setFoodNow(veggies);
 };
 
 
   return (
     <div className="App">
-      <p className="month">{monthy}</p>
       <Container foodNow={foodNow}  />
       <Footer />
     </div>
