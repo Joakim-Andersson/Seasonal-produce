@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 import Container from './component/Container'
-import Header from './component/Header'
 import Main from './component/Main'
 import Footer from './component/Footer'
+import unsplash from './unsplash.jpg'
 
 const veggiePerMonth = [
   {"id": 0, "month": "January", "veggies": ["Brussels sprouts", "Kale", "Yellow onion", "artichoke", "Carrots", "Parsnip", "Potato. Celeriac", "Black radish", "Beetroot", "Red cabbage", "Black root", "Cabbage" ]},
@@ -44,10 +44,8 @@ const getMonthFood = monthIndex => {
 
   return (
     <div className="App">
-      <Header />
       <p className="month">{monthy}</p>
       <Container foodNow={foodNow}  />
-      <Main foodNow={foodNow} />
       <Footer />
     </div>
   );

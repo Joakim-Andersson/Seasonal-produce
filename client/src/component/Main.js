@@ -53,7 +53,9 @@ function Main({foodNow}) {
             )
         }
         </ul>
+        <ul className="recipes" >
         {searchState.length !== 0 && searchState.map(recipe => ( <Recipe key={recipe.recipe.label} label={recipe.recipe.label} image={recipe.recipe.image} ingredients={recipe.recipe.ingredients} />))}
+        </ul>
         </div>
     )
 }
