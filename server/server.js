@@ -21,13 +21,14 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
 });
 
-app.get('/hello/:vegetable', (req, res) => {
+app.get('/food/:vegetable', (req, res) => {
   let searchQuery = req.params.vegetable;
   fetch(`${baseURL}&q=${searchQuery}`, { method: 'GET' })
-  .then((res) =>  res.json())
-  .then((json) => res.json(json.hits)
-  )});
+    .then((res) => res.json())
+    .then((json) => res.json(json.hits)
+    )
+});
 
 app.get('/api/courses/:id', (req, res) => {
-  res.send({express: req.params.id});
+  res.send({ express: req.params.id });
 });
