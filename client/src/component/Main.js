@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Recipe from './Recipe';
-import arrow from './arrow.png';
+import arrow from '../arrow.png';
 const fetch = require('node-fetch');
 // import axios from "axios";
 
