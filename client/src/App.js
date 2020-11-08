@@ -44,26 +44,19 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" key={Math.random()}>
       <Router>
+      <Navbar />
         <Switch>
-          <Route exact path="/food">
-            <Navbar />
+          <Route path="/food">
             <Header />
             <Main foodNow={foodNow} nowMonth={nowMonth} />
-            <Footer />
-          </Route>
-          <Route path="/food/">
-            <Navbar />
-            <Main foodNow={foodNow} nowMonth={nowMonth} />
-            <Footer />
           </Route>
           <Route exact path="/About">
-            <Navbar />
             <About />
-            <Footer />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
