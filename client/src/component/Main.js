@@ -17,7 +17,7 @@ function Main({ foodNow, nowMonth }) {
         setClickedVeggie(search);
     }
 
-    console.log(searchState, "nun ska den va tom")
+    console.log(searchState, "nu ska den va tom")
     return (
         <div className="main-veggielist">
             <h3 className="month-name" >{nowMonth} veggies:</h3>

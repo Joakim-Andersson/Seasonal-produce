@@ -22,14 +22,14 @@ app.listen(port, () => {
 });
 
 app.get('/food/carrots', (req, res) => {
-  // let searchQuery = req.params.vegetable;
-  // fetch(`${baseURL}&q=${searchQuery}`, { method: 'GET' })
-  //   .then((res) => res.json())
-  //   .then((res) => res.json())
-  //   .then((json) => res.json(json.hits)
-  //   )
-    const data = mockdata;
-    res.json(data.hits)
+  let searchQuery = req.params.vegetable;
+  fetch(`${baseURL}&q=${searchQuery}`, { method: 'GET' })
+    .then((res) => res.json())
+    .then((res) => res.json())
+    .then((json) => res.json(json.hits)
+    )
+    // const data = mockdata;
+    // res.json(data.hits)
 });
 
 app.get('/api/courses/:id', (req, res) => {

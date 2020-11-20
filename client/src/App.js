@@ -9,6 +9,7 @@ import Footer from './component/Footer';
 import Navbar from './component/Navbar';
 import Main from './component/Main';
 import About from './component/About';
+import Story from './component/Story';
 
 const veggiePerMonth = [
   { "id": 0, "month": "January", "veggies": ["Brussels sprouts", "Kale", "Yellow onion", "artichoke", "Carrots", "Parsnip", "Potato. Celeriac", "Black radish", "Beetroot", "Red cabbage", "Black root", "Cabbage"] },
@@ -50,6 +51,7 @@ function App() {
         <Switch>
           <Route path="/food">
             <Header />
+            <Story />
             <Main foodNow={foodNow} nowMonth={nowMonth} />
           </Route>
           <Route exact path="/About">
