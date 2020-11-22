@@ -133,7 +133,7 @@ body {
 }
 
 .hero-text button:hover {
-  background-color: #555;
+  background-color: rgb(94, 93, 93);
   color: white;
 }
 
