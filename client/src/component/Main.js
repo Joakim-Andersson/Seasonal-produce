@@ -2,22 +2,20 @@ import React, { useState } from "react";
 import Recipe from './Recipe';
 import arrow from '../arrow.png';
 const fetch = require('node-fetch');
-// import axios from "axios";
 
 function Main({ foodNow, nowMonth }) {
     const [searchState, setSearchState] = useState([]);
     const [clickedVeggie, setClickedVeggie] = useState('');
 
     const getSearch = async (search) => {
+        setClickedVeggie(search);
         const response = await fetch(
             `http://localhost:8000/food/${search}`
         );
-        const data = await response.json();
-        setSearchState(data);
-        setClickedVeggie(search);
+        setSearchState(response);
     }
 
-    console.log(searchState, "nu ska den va tom")
+    console.log(searchState, "nu ska searchState va tom")
     return (
         <div className="main-veggielist">
             <h3 className="month-name" >{nowMonth} veggies:</h3>
