@@ -21,11 +21,18 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
 });
 
-app.get('/food/:vegetable', (req, res) => {
+app.get('/food/:vegetable', async (req, res) => {
   let searchQuery = req.params.vegetable;
-  fetch(`${baseURL}&q=${searchQuery}`, { method: 'GET' })
-    .then((data) => res.json(data.hits)
-    )
-    // const data = mockdata;
-    // res.json(data.hits)
+  const responsData = await fetch(`${baseURL}&q=${searchQuery}`, { method: 'GET' })
+  const data = await responsData.json()
+    // .then(res => res.json())
+    // .then(data => {
+    //   console.log('Success:', data.hits);
+    // })
+    // .catch((error) => {
+    //   console.error('Error:', error);
+    // })
+  // const data = mockdata;
+  // res.json(data.hits)
+  res.json(data);
 });
