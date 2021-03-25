@@ -17,6 +17,8 @@ I would like to include the possibility to check for the location of the user, a
 
 The suggestions for each month now comes from an array in the same file. This shuld be moved to its own text-file when more information is gathered. 
 
+Styling is about to have a total makeover. The CSS of this is an MVP.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
