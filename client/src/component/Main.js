@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Recipe from './Recipe';
 import arrow from '../arrow.png';
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import Button from 'react-bootstrap/Button'
+import {Jumbotron, Button} from 'react-bootstrap'
+
 
 const fetch = require('node-fetch');
 // import axios from "axios";
@@ -33,7 +33,7 @@ function Main({ foodNow, nowMonth }) {
                 Use this website to find recipes with a focus on fresh and locally grown vegetables.
                 </p>
                 <p>
-                    <Button variant="primary">Learn more</Button>
+                    <Button variant="light">Learn more</Button>
                 </p>
             </Jumbotron>
             <div className="main-veggielist">
