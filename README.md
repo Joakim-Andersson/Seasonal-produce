@@ -1,7 +1,15 @@
 # Seasonal Produce - Hackaton project
+This app was made during a 24-hour hackathon.
+It was built using React as the frontend and Express.js for the backend, which calls the data from the Edamam API.
 
 ## Idea
-Ordered list of veggies and produce that are seasonal. 
+This app shows vegetables and produce that are seasonal, and allows the user to find vegan recipes based on these. Depending on which season a user visits the site they will be see different vegetables, which will always make the site inspirational and relevant. 
+
+## Tech stack
+- React JS
+- CSS
+- Express.JS + CORS 
+- Node Fetch
 
 # Getting Started with Create React App
 
@@ -18,11 +26,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 

@@ -36,7 +36,7 @@ function Main({ foodNow, nowMonth }) {
                     <h3 className="recipe-header" > Recipes with {clickedVeggie} </h3>
                     <ul className="recipes" >
                         {searchState.length !== 0 && searchState.map(
-                            recipe => (<Recipe key={recipe.recipe.label} label={recipe.recipe.label} image={recipe.recipe.image} ingredient={recipe.recipe.ingredientLines} />))}
+                            recipe => (<Recipe key={recipe.recipe.label} label={recipe.recipe.label} image={recipe.recipe.image} ingredient={recipe.recipe.ingredientLines} url={recipe.recipe.url} />))}
                     </ul>
                 </section>
             )}

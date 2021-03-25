@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Recipe({ label, image, ingredient }) {
+function Recipe({ label, image, ingredient, url }) {
 
   return (
     <article key={Math.random()} className="flip-card" >
@@ -15,7 +15,7 @@ function Recipe({ label, image, ingredient }) {
         <div className="back">
           <h1 className="recipe-name">{label}</h1>
           {ingredient.map(ingr => <p key={Math.random()} className="ingredient-part"> {ingr} </p>)}
-          <button className="button-recipe"> See full recipe </button>
+          <a className="url-recipe" href={url} > <button className="button-recipe"> Take me to full recipe </button> </a>
         </div>
       </div>
     </article>
