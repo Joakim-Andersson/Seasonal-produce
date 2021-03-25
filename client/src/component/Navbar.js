@@ -11,10 +11,6 @@ function NavigationBar() {
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#food">Food</Nav.Link>
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
-        </Form>
       </Navbar>
     )
 }

@@ -193,3 +193,10 @@ img {
   text-shadow: 0 0 10px black;
 }
 
+.jumbotron h2 {
+  font-size: 20px;
+}
+
+.jumbotron p {
+  max-width: 700px;
+}

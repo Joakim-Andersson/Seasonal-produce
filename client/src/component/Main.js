@@ -26,7 +26,7 @@ function Main({ foodNow, nowMonth }) {
         <React.Fragment>
             <Jumbotron>
                 <h1>Seasonal produce</h1>
-                <h3>Save the Planet - One meal at a time! </h3>
+                <h2>Save the Planet - One meal at a time! </h2>
                 <p>
                 On a mission to make scandinavian chefs inspired each season. 
                 Shopping nordic and seasonal produce helps the environment from unnessccary waste and transports. 
@@ -37,7 +37,7 @@ function Main({ foodNow, nowMonth }) {
                 </p>
             </Jumbotron>
             <div className="main-veggielist">
-                <h3 className="month-name" >{nowMonth} veggies:</h3>
+                <h2 className="month-name" >{nowMonth} veggies:</h2>
                 <ul className="monthFood" >
                     {foodNow.length !== 0 && foodNow.map(
                         food =>
