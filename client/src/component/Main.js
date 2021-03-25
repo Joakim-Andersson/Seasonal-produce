@@ -9,20 +9,14 @@ function Main({ foodNow, nowMonth }) {
     const [clickedVeggie, setClickedVeggie] = useState('');
 
     const getSearch = async (search) => {
-        
-        console.log("search 1:", search, "searchState 1", searchState)
-
+    
         const response = await fetch(
             `http://localhost:8000/food/${search}`
         );
-
-        console.log("search 2:", search, "searchState 2", searchState)
-
-        setSearchState(response.hits);
-        console.log(searchState, search, "after")
+        const recipes = await response.json();
+        console.log(recipes)
+        setSearchState(recipes);
         setClickedVeggie(search);
-
-        console.log("after getSarch", searchState)
 
     }
     return (
