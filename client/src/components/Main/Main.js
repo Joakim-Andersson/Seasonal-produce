@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import Recipe from '../Recipe/Recipe';
+import RecipeSection from '../RecipeSection/RecipeSection';
 import { Jumbotron, Button } from 'react-bootstrap'
 
-
 const fetch = require('node-fetch');
-// import axios from "axios";
 
 function Main({ foodNow, nowMonth }) {
     const [searchState, setSearchState] = useState([]);
@@ -46,20 +44,8 @@ function Main({ foodNow, nowMonth }) {
                     )
                     }
                 </ul>
-                {searchState.length === 0 ? (
-                    <div className="no-recipes-line">
-                        <h3 className="no-recipes" >Please choose a vegetable above, and get inspired!</h3>
-                    </div>
-                ) : (
-                    <section className="recipe-section">
-                        <h3 className="recipe-header" > Recipes with {clickedVeggie} </h3>
-                        <ul className="recipes" >
-                            {searchState.length !== 0 && searchState.map(
-                                recipe => (<Recipe key={recipe.recipe.label} label={recipe.recipe.label} image={recipe.recipe.image} ingredient={recipe.recipe.ingredientLines} url={recipe.recipe.url} />))}
-                        </ul>
-                    </section>
-                )}
             </div>
+            <RecipeSection searchState={searchState} clickedVeggie={clickedVeggie} />
         </React.Fragment>
     )
 }

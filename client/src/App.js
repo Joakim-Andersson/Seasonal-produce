@@ -7,7 +7,7 @@ import './App.css';
 import './components/About/about.scss';
 import './components/Footer/footer.scss';
 import './components/Navbar/navbar.scss';
-import './components/Recipe/recipe.scss';
+import './components/RecipeCard/recipecard.scss';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import Main from './components/Main/Main';

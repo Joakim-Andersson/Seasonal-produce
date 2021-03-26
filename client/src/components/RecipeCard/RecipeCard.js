@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Recipe({ label, image, ingredient, url }) {
+function RecipeCard({ label, image, ingredient, url }) {
 
   return (
     <article key={Math.random()} className="flip-card" >
@@ -22,5 +22,5 @@ function Recipe({ label, image, ingredient, url }) {
   )
 }
 
-export default Recipe;
+export default RecipeCard;
 
