@@ -1,0 +1,27 @@
+.about {
+    font-size: 1em;
+    margin: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-family: "Courgette", cursive;
+        font-size: 3em;
+    }
+
+    h3 {
+        font-family: "Courgette", cursive;
+        font-size: 2em;
+        margin: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 20px;
+        max-width: 60%;
+        line-height: 1.6;
+    }
+}

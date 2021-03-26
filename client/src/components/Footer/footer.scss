@@ -1,0 +1,24 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    color: black;
+    margin: 20px;
+
+    p {
+        align-content: center;
+        font-weight: 300;
+        margin: 5px;
+        font-size: 14px;
+    }
+    a {
+        align-content: center;
+        font-weight: 300;
+        font-size: 14px;
+        text-decoration: underline;
+        color: black;
+    }
+}

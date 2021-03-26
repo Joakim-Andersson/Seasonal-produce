@@ -4,11 +4,14 @@ import {
   Switch, Route,
 } from 'react-router-dom';
 import './App.css';
-// import Header from './component/Header';
-import Footer from './component/Footer';
-import Navbar from './component/Navbar';
-import Main from './component/Main';
-import About from './component/About';
+import './components/About/about.scss';
+import './components/Footer/footer.scss';
+import './components/Navbar/navbar.scss';
+import './components/Recipe/recipe.scss';
+import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Navbar';
+import Main from './components/Main/Main';
+import About from './components/About/About';
 
 const veggiePerMonth = [
   { "id": 0, "month": "January", "veggies": ["Brussels sprouts", "Kale", "Yellow onion", "Artichoke", "Carrots", "Parsnip", "Potato. Celeriac", "Black radish", "Beetroot", "Red cabbage", "Black root", "Cabbage"] },
@@ -56,7 +59,7 @@ function App() {
           <Route path="/food">
             <Main foodNow={foodNow} nowMonth={nowMonth} />
           </Route>
-          <Route exact path="/About">
+          <Route exact path="/about">
             <About />
           </Route>
         </Switch>

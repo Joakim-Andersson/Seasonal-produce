@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Recipe from './Recipe';
-import arrow from '../arrow.png';
-import {Jumbotron, Button} from 'react-bootstrap'
+import Recipe from '../Recipe/Recipe';
+import { Jumbotron, Button } from 'react-bootstrap'
 
 
 const fetch = require('node-fetch');
@@ -28,12 +27,12 @@ function Main({ foodNow, nowMonth }) {
                 <h1>Seasonal produce</h1>
                 <h2>Save the Planet - One meal at a time! </h2>
                 <p>
-                On a mission to make scandinavian chefs inspired each season. 
-                Shopping nordic and seasonal produce helps the environment from unnessccary waste and transports. 
-                Use this website to find recipes with a focus on fresh and locally grown vegetables.
+                    On a mission to make scandinavian chefs inspired each season.
+                    Shopping nordic and seasonal produce helps the environment from unnessccary waste and transports.
+                    Use this website to find recipes with a focus on fresh and locally grown vegetables.
                 </p>
                 <p>
-                    <Button variant="light">Learn more</Button>
+                    <Button variant="light">See vegetables in season</Button>
                 </p>
             </Jumbotron>
             <div className="main-veggielist">
@@ -47,7 +46,11 @@ function Main({ foodNow, nowMonth }) {
                     )
                     }
                 </ul>
-                {searchState.length === 0 ? (<div className="no-recipes-line"> <h3 className="no-recipes" >Please choose a vegetable above, and get inspired!</h3> <img className="arrow" src={arrow} alt="arrow" /> </div>) : (
+                {searchState.length === 0 ? (
+                    <div className="no-recipes-line">
+                        <h3 className="no-recipes" >Please choose a vegetable above, and get inspired!</h3>
+                    </div>
+                ) : (
                     <section className="recipe-section">
                         <h3 className="recipe-header" > Recipes with {clickedVeggie} </h3>
                         <ul className="recipes" >
