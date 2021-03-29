@@ -11,7 +11,8 @@ function Main({ foodNow, nowMonth }) {
     const getSearch = async (search) => {
 
         const response = await fetch(
-            `http://localhost:8000/food/${search}`
+            // `http://localhost:8000/food/${search}`
+            `https://seasonal-produce-client.herokuapp.com/food/${search}`
         );
         const recipes = await response.json();
         console.log(recipes)
