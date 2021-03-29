@@ -2,6 +2,7 @@
 This app was made during a 24-hour hackathon.
 It was built using React as the frontend and Express.js for the backend, which calls the data from the Edamam API.
 
+
 ## Idea
 This app shows vegetables and produce that are seasonal to scandnavia, and allows users to find vegan recipes based on these. Depending on which season a user visits the site they will be see different vegetables, which will always make the site inspirational and relevant. 
 
@@ -10,6 +11,11 @@ This app shows vegetables and produce that are seasonal to scandnavia, and allow
 - CSS
 - Express.JS + CORS 
 - Node Fetch
+
+- Heroku for deployment.
+Client/Frontend: https://seasonal-produce-client.herokuapp.com/
+Server/Backend: https://seasonal-produce-server.herokuapp.com/food/carrot
+(/food/carrot/ as an example to show the fetched data)
 
 ## Roadmap
 
