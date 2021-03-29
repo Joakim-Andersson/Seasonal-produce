@@ -9,6 +9,10 @@ app.use(cors())
 
 global.fetch = fetch;
 
+// Api .env
+const API_ID="11317cec"
+const API_KEY="a1ac6aa08be8a2bb67321a3b474f6f97"
+
 // API
 require('dotenv').config();
 const ID = process.env.API_ID;
