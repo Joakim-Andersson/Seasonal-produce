@@ -10,8 +10,8 @@ This app shows vegetables and produce that are seasonal to Scandinavia, and allo
 - CSS
 - Express + CORS 
 - Node Fetch
-- Heroku for deployment.\
-Client/Frontend: **Work in Progress** https://seasonal-produce-client.herokuapp.com/ \
+- Heroku for hosting/deployment.\
+Client/Frontend: **Work in Progress**\
 Server/Backend: https://seasonal-produce-server.herokuapp.com/food/carrot \
 (/food/carrot/ as an example to show the fetched data)
 
