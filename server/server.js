@@ -8,7 +8,8 @@ const mockdata = require("./mochdata.json")
 app.use(cors())
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
   next();
 });
 
@@ -32,12 +33,15 @@ app.listen(port, () => {
 });
 
 app.get('/food/:vegetable', async (req, res) => {
+  try {
+  res.header('Access-Control-Allow-Origin', '*');
   let searchQuery = req.params.vegetable;
   const responsData = await fetch(`${baseURL}&q=${searchQuery}`, { method: 'GET' })
   const data = await responsData.json()
   res.json(data.hits);
-  res.header('Access-Control-Allow-Origin', '*');
-
+} catch(err) {
+  alert(err); // TypeError: failed to fetch
+}
   // const data = mockdata;
   // res.json(data.hits)
 });

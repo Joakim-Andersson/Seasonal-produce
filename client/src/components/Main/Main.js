@@ -9,16 +9,18 @@ function Main({ foodNow, nowMonth }) {
     const [clickedVeggie, setClickedVeggie] = useState('');
 
     const getSearch = async (search) => {
-
+        try {
         const response = await fetch(
             // `http://localhost:8000/food/${search}`
-            `https://seasonal-produce-client.herokuapp.com/food/${search}`
+            `https://seasonal-produce-client.herokuapp.com/food/${search}`, { mode: 'no-cors' }
         );
         const recipes = await response.json();
         console.log(recipes)
         setSearchState(recipes);
         setClickedVeggie(search);
-
+    } catch(err) {
+        alert(err); // TypeError: failed to fetch
+      }
     }
     return (
         <React.Fragment>
