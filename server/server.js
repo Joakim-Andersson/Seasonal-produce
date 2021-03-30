@@ -36,6 +36,7 @@ app.get('/food/:vegetable', async (req, res) => {
   const responsData = await fetch(`${baseURL}&q=${searchQuery}`, { method: 'GET' })
   const data = await responsData.json()
   res.json(data.hits);
+  res.header('Access-Control-Allow-Origin', '*');
 
   // const data = mockdata;
   // res.json(data.hits)
