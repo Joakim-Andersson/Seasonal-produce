@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "bootstrap": "^4.6.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "file-system": "^1.2.2",
     "jsonfile": "^6.1.0",
