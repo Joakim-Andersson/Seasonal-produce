@@ -12,7 +12,7 @@ function Main({ foodNow, nowMonth }) {
         try {
         const response = await fetch(
             // `http://localhost:8000/food/${search}`
-            `https://seasonal-produce-client.herokuapp.com/food/${search}`, { mode: 'no-cors' }
+            `https://seasonal-produce-client.herokuapp.com/food/${search}`
         );
         const recipes = await response.json();
         console.log(recipes)
